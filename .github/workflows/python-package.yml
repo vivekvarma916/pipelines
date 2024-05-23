@@ -19,12 +19,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.11"]
+        python-version: ["3.12.3"]
 
-    steps:
-    - name: Change ownership of /github/home
-      run: |
-          sudo chown -R $(AASUVI) /github/home 
+    steps:  
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
