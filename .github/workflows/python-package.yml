@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: [ self-hosted, BM1 ]
+    runs-on: [ self-hosted, AASUVI]
     strategy:
       fail-fast: false
       matrix:
