@@ -53,7 +53,7 @@ class flipkart_tests(unittest.TestCase):
         search_box = self.driver.find_element(By.XPATH, "//input[@title='Search for Products, Brands and More']")
         search_box.send_keys("laptops")
         search_box.send_keys(Keys.ENTER)
-
+        #TEST
         # Wait for HP laptops to appear
         # wait = WebDriverWait(driver, 40)
         # wait.until(EC.presence_of_element_located((By.XPATH, "//div[@title='HP']//div[@class='_1p7h2j']")))
