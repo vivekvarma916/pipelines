@@ -8,6 +8,12 @@ import flipkart_obj
 import unittest
 from object import flipkart
 import time
+import sys
+import os
+import subprocess
+import pywinauto
+
+
 
 # # Set the path to your ChromeDriver executable
 # chrome_driver_path = "C:\Program Files\Python38\chromedriver.exe"
@@ -132,3 +138,11 @@ class flipkart_tests(unittest.TestCase):
     #     time.sleep(4)
     #
     #     self.driver.quit()
+
+
+
+    def test_above_method(self):
+        self.path = "D:\Softwares\ZoomInstaller.exe"
+        self.app = flipkart.desktop_functions(self.path)
+        time.sleep(5)
+

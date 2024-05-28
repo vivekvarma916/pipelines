@@ -1,4 +1,6 @@
 import time
+import pywinauto
+import subprocess
 
 class Flipkart():
     def __init__(self):
@@ -12,3 +14,7 @@ class Flipkart():
         self.depart_on = '//*[@id="container"]/div/div[2]/div[1]/div/div[2]/div/div[2]/form/div/div[3]/div[2]/div/input'
         self.depart_date = '//*[@id="container"]/div/div[2]/div[1]/div/div[2]/div/div[2]/form/div/div[3]/div[1]/div[2]/div/div/div/div/table[1]/tbody/tr[3]/td[7]/div/button'
         self.search_button = '//*[@id="container"]/div/div[2]/div[1]/div/div[2]/div/div[2]/form/div/button'
+
+    def desktop_functions(self, path):
+        window_ref = pywinauto.application.Application().start(path)
+        return window_ref
