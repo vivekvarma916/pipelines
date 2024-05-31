@@ -42,4 +42,13 @@ jobs:
     #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python -m pytest C:\actions-runner\_work\pipelines\pipelines\.github\workflows
+        python -m pytest C:\actions-runner\_work\pipelines\pipelines\.github\workflows --junit-xml=test-result.xml
+
+    - name: Publish test results
+      if: always()
+      uses: pmeier/pytest-results-action@main
+      with:
+        title: test results
+        path: test-result.xml
+        summary: true
+        display-options: fEX
